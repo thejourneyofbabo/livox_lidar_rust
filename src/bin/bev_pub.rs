@@ -200,7 +200,7 @@ fn create_bev_pointcloud2(points: Vec<BevPoint>, original_header: &Header) -> Po
 
     // 새로운 헤더 생성 (frame_id를 BEV로 변경)
     let mut bev_header = original_header.clone();
-    //bev_header.frame_id = format!("{}_bev", original_header.frame_id);
+    bev_header.frame_id = format!("{}_bev", original_header.frame_id);
 
     PointCloud2 {
         header: bev_header,
